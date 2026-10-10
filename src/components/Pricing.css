@@ -1,0 +1,131 @@
+.pricing {
+  background: var(--bg-light);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow);
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.pricing-card-popular {
+  border: 2px solid var(--primary);
+  transform: scale(1.05);
+}
+
+.pricing-card-popular:hover {
+  transform: scale(1.05) translateY(-8px);
+}
+
+.pricing-card-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradient);
+  color: white;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.pricing-card-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+
+.pricing-card-description {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.pricing-card-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.pricing-card-amount {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.pricing-card-period {
+  font-size: 16px;
+  color: var(--text-light);
+}
+
+.pricing-card-features {
+  list-style: none;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.pricing-card-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.pricing-card-features li svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.pricing-card-cta {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 968px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .pricing-card-popular {
+    transform: scale(1);
+  }
+
+  .pricing-card-popular:hover {
+    transform: translateY(-8px);
+  }
+}
